@@ -1,6 +1,5 @@
 ﻿body {
     padding-top: 50px;
-    padding-bottom: 20px;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -22,3 +21,28 @@ select,
 textarea {
     max-width: 280px;
 }
+
+html, body, main-container {
+    height: 100%
+}
+
+.center-area {
+    padding-top:148px;
+}
+.center-area > h2{
+    color:#a5a2a2;
+}
+
+.content-area > h3 {
+    font-size: 20px;
+    color: #a5a2a2;;
+}
+
+#carousel-projects{
+    max-width:900px;
+    margin-top:40px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+

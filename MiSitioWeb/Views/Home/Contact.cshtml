@@ -1,17 +1,37 @@
-﻿@{
-    ViewBag.Title = "Contact";
+﻿@model MiSitioWeb.Models.Contacto
+@{
+    ViewBag.Title = "Contacto";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+<div class="container content-area">
+    <h2>@ViewBag.Title.</h2>
+    <h3>@ViewBag.Message.</h3>
+
+    <div class="jumbotron">
+        @using (Html.BeginForm("Contact", "Home", FormMethod.Post))
+        {
+            <div class=" form-group">
+                @Html.LabelFor(m => m.Nombre, "Nombre")
+                @Html.TextBoxFor(m => m.Nombre, new { @class = "form-control" })
+            </div>
+            <div class=" form-group">
+                @Html.LabelFor(m => m.Email, "Email")
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+            </div>
+            <div class=" form-group">
+                @Html.LabelFor(m => m.Asunto, "Asunto")
+                @Html.TextBoxFor(m => m.Asunto, new { @class = "form-control" })
+            </div>
+            <div class=" form-group">
+                @Html.LabelFor(m => m.Mensaje, "Mensaje")
+                @Html.TextBoxFor(m => m.Mensaje, new { @class = "form-control" })
+            </div>
+            <button type="submit" class="btn bg-primary">Enviar</button>
+
+
+        }
+
+    </div>
+
+</div>
